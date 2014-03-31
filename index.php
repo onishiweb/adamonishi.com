@@ -6,38 +6,43 @@
 		<title><?php wp_title(); ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic|Merriweather+Sans:800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 		<!--[if lt IE 9]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-		
-		<header class="global-header" role="banner">
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<p class="tagline"><?php bloginfo( 'description' ); ?></p>
-		</header>
+		<div class="container">
+			<header class="global-header" role="banner">
+				<h1><?php bloginfo( 'name' ); ?></h1>
+				<p class="tagline"><?php bloginfo( 'description' ); ?></p>
+			</header>
 
-		<?php if( have_posts() ): while( have_posts() ): the_post(); ?>
+			<?php if( have_posts() ): while( have_posts() ): the_post(); ?>
 
-			<article role="main">
-				<header>
-					<h1><?php the_title(); ?></h1>
-					<p class="byline">Posted on: <time><?php echo get_the_time(); ?></time> in <?php the_category(); ?></p>
-				</header>
+				<article role="main" <?php post_class(); ?>>
+					<header>
+						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+						<p class="byline">Posted on: <time><?php echo get_the_date(); ?></time> in <?php the_category(', '); ?></p>
+					</header>
 
-				<?php if( is_single() ): ?>
-					<?php the_content(); ?>
-				<?php else: ?>
-					<p class=""><?php the_excerpt(); ?></p>
-				<?php endif; ?>
-			</article>
+					<?php if( is_single() ): ?>
+						<?php the_content(); ?>
+					<?php else: ?>
+						<p class="excerpt"><?php the_excerpt(); ?></p>
+						<p class="read-more"><a href="<?php the_permalink(); ?>">Read full post &raquo;</a></p>
+					<?php endif; ?>
+				</article>
 
-		<?php endwhile; endif; ?>
+			<?php endwhile; endif; ?>
 
-		<footer class="global-footer">
-			
-		</footer>
+			<footer class="global-footer">
+				
+			</footer>
+		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
