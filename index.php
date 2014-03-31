@@ -26,7 +26,9 @@
 				<article role="main" <?php post_class(); ?>>
 					<header>
 						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-						<p class="byline">Posted on: <time><?php echo get_the_date(); ?></time> in <?php the_category(', '); ?></p>
+						<p class="byline">
+							Posted on <time><?php echo get_the_date(); ?></time>, in <?php the_category(', '); ?>
+						</p>
 					</header>
 
 					<?php if( is_single() ): ?>
