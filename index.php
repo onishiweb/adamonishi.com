@@ -17,7 +17,7 @@
 		<![endif]-->
 		<div class="container">
 			<header class="global-header" role="banner">
-				<h1><?php bloginfo( 'name' ); ?></h1>
+				<h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<p class="tagline"><?php bloginfo( 'description' ); ?></p>
 			</header>
 

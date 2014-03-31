@@ -436,6 +436,14 @@ a:active {
 	top:1px;
 }
 
+h1 a {
+	color:#3B3B3B;
+}
+
+h1 a:hover {
+	border-bottom:0;
+}
+
 .container {
 	width:90%;
 	max-width:55em;
@@ -453,9 +461,22 @@ a:active {
 		margin-bottom:0;
 	}
 
-.home .post {
+.post {
 	margin-bottom:40px;
 }
+
+	.post header {
+		margin-bottom:30px;
+	}
+
+	.post time {
+		color:#E8275B;
+	}
+	
+	.post h1 {
+		margin-bottom:5px;
+		font-size:2.625rem;
+	}
 
 .home .post:after {
 	content:'';
@@ -465,25 +486,3 @@ a:active {
 	padding-top:40px;
 	border-bottom:1px solid #2BACB8;
 }
-
-	.home .post header {
-		margin-bottom:30px;
-	}
-
-	.home .post time {
-		color:#E8275B;
-	}
-
-	.home .post h1 {
-		margin-bottom:5px;
-		font-size:2.625rem;
-	}
-
-		.home .post h1 a {
-			color:#3B3B3B;
-			text-decoration:none;
-		}
-
-		.home .post h1 a:hover {
-			border-bottom:0;
-		}
