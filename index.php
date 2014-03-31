@@ -13,23 +13,31 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		
-		<header>
+		<header class="global-header" role="banner">
 			<h1><?php bloginfo( 'name' ); ?></h1>
-			<p class="tagline"><?php bloginfo('description'); ?></p>
+			<p class="tagline"><?php bloginfo( 'description' ); ?></p>
 		</header>
 
 		<?php if( have_posts() ): while( have_posts() ): the_post(); ?>
 
-			<article>
-				
+			<article role="main">
+				<header>
+					<h1><?php the_title(); ?></h1>
+					<p class="byline">Posted on: <time><?php echo get_the_time(); ?></time> in <?php the_category(); ?></p>
+				</header>
+
+				<?php if( is_single() ): ?>
+					<?php the_content(); ?>
+				<?php else: ?>
+					<p class=""><?php the_excerpt(); ?></p>
+				<?php endif; ?>
 			</article>
 
 		<?php endwhile; endif; ?>
 
-		<footer>
+		<footer class="global-footer">
 			
 		</footer>
-
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
