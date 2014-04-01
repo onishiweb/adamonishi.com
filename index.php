@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic|Merriweather+Sans:800' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,300,400' rel='stylesheet' type='text/css'>
 
 		<?php wp_head(); ?>
 	</head>
@@ -42,12 +42,21 @@
 			<?php endwhile; endif; ?>
 
 			<nav class="page-nav clearfix">
+				<?php if( is_single() ): ?>
 				<div class="align-left">
-					<?php next_posts_link( '&laquo; previous posts'); ?>
-				</div>
-				<div class="align-right">
-					<?php previous_posts_link( 'next posts &raquo;' ); ?>
-				</div>
+						<?php previous_post_link( '%link', '&laquo; previous post' ); ?>
+					</div>
+					<div class="align-right">
+						<?php next_post_link( '%link', 'next post &raquo;'); ?>
+					</div>
+				<?php else: ?>
+					<div class="align-left">
+						<?php next_posts_link( '&laquo; previous posts'); ?>
+					</div>
+					<div class="align-right">
+						<?php previous_posts_link( 'next posts &raquo;' ); ?>
+					</div>
+				<?php endif; ?>
 			</nav>
 		</div>
 
