@@ -3,11 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
 		<title><?php wp_title(); ?></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic|Merriweather+Sans:800' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,300,400' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<?php wp_head(); ?>
 	</head>
@@ -25,9 +24,9 @@
 
 				<article role="main" <?php post_class(); ?>>
 					<header>
-						<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<p class="byline">
-							Posted on <time><?php echo get_the_date(); ?></time>, in <?php the_category(', '); ?>
+							Posted on <time><?php echo get_the_date(); ?></time>, in <?php the_category(' and '); ?>
 						</p>
 					</header>
 
@@ -58,6 +57,7 @@
 					</div>
 				<?php endif; ?>
 			</nav>
+			
 		</div>
 
 		<footer class="global-footer">
@@ -95,13 +95,7 @@
 			</div>		
 		</footer>
 
-		<?php
-		/**
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-		**/
-		
-		wp_footer(); ?>
+		<?php wp_footer(); ?>
 		
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
