@@ -88,8 +88,6 @@ a {
 	}
 }
 
-
-
 h1 a,
 h2 a {
 	color:$clr-text;
@@ -193,7 +191,7 @@ blockquote {
 	}
 
 	a {
-		color:#F5ECD9;
+		color:$clr-links;
 		font-family:'Open Sans', sans-serif;
 		font-size:1.125rem;
 		font-weight:300;
