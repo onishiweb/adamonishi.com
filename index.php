@@ -24,7 +24,12 @@
 
 				<article role="main" <?php post_class(); ?>>
 					<header>
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<?php if( is_single() ): ?>
+							<h1><?php the_title(); ?></h1>
+						<?php else: ?>
+							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<?php endif; ?>
+
 						<p class="byline">
 							Posted on <time><?php echo get_the_date(); ?></time>, in <?php the_category(' and '); ?>
 						</p>
