@@ -354,8 +354,7 @@ a {
     position: relative;
     top: 1px; }
 
-h1 a,
-h2 a {
+h1 a, h2 a {
   color: #3b3b3b;
   border-bottom: 0; }
 
