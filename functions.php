@@ -69,7 +69,7 @@ function ao_enqueue_styles() {
 	}
 
 	wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic|Open+Sans:800,300,400');
-	wp_enqueue_style( 'main', get_stylesheet_uri(), array('fonts'), '2' );
+	wp_enqueue_style( 'main', get_stylesheet_uri(), array('fonts'), '2.1' );
 }
 
 add_action( 'wp_enqueue_scripts', 'ao_enqueue_styles' );
