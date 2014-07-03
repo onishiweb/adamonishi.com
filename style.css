@@ -322,7 +322,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #3b3b3b;
-  background-color: #F5ECD9; }
+  background-color: #f5ecd9; }
   @media screen and (min-width: 40em) {
     body {
       font-size: 18px; } }
@@ -431,7 +431,7 @@ blockquote {
     .footer-col ul li {
       margin-bottom: 5px; }
   .footer-col a {
-    color: #e8275b;
+    color: #f5ecd9;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.125rem;
     font-weight: 300;
@@ -470,6 +470,7 @@ blockquote {
   .post img {
     display: block;
     max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 0 auto 20px; }
   .post .wp-caption-text {

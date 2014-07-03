@@ -42,13 +42,14 @@ $clr-links:#E8275B;
 $clr-highlight:#2BACB8;
 $clr-highlight-light:#BBCCB9;
 $clr-text:#3B3B3B;
+$clr-background:#F5ECD9;
 
 body {
 	font-family:'Gentium Book Basic', serif;
 	font-size:16px;
 	line-height:1.4;
 	color:$clr-text;
-	background-color:#F5ECD9;
+	background-color:$clr-background;
 
 	@media screen and (min-width: 40em) {
 		font-size:18px;
@@ -190,7 +191,7 @@ blockquote {
 	}
 
 	a {
-		color:$clr-links;
+		color:$clr-background;
 		font-family:'Open Sans', sans-serif;
 		font-size:1.125rem;
 		font-weight:300;
@@ -239,6 +240,7 @@ blockquote {
 	img {
 		display:block;
 		max-width:100%;
+		width:100%;
 		height:auto;
 		margin:0 auto 20px;
 	}
