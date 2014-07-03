@@ -467,6 +467,29 @@ blockquote {
     @media screen and (min-width: 41.25em) {
       .post h2 {
         font-size: 2.625rem; } }
+  .post img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px; }
+  .post .wp-caption-text {
+    margin-top: -20px;
+    padding: 7px 10px;
+    font-size: 14px;
+    font-size: .875rem;
+    background-color: #fff; }
+  .post .flex-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    padding-top: 25px; }
+    .post .flex-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
 .single .post h1 {
   font-size: 2rem; }
