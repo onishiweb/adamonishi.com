@@ -59,7 +59,7 @@ endif; // adamonishi_setup
 add_action( 'after_setup_theme', 'adamonishi_setup' );
 
 function ajo_inline_styles() {
-	$css_file = get_template_directory_uri() . '/css/core.css';
+	$css_file = get_template_directory_uri() . '/css/core.css?asd';
 	$css = file_get_contents($css_file);
 
 	echo "<style>{$css}</style>";
