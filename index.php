@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		
-		<title><?php wp_title(); ?></title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title><?php wp_title(); ?></title>		
 
 		<?php wp_head(); ?>
 	</head>
@@ -38,7 +38,7 @@
 					<?php if( is_single() ): ?>
 						<?php the_content(); ?>
 					<?php else: ?>
-						<p class="excerpt"><?php the_excerpt(); ?></p>
+						<div class="excerpt"><?php the_excerpt(); ?></div>
 						<p class="read-more"><a href="<?php the_permalink(); ?>">Read full post &raquo;</a></p>
 					<?php endif; ?>
 				</article>

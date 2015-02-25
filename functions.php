@@ -54,7 +54,7 @@ if ( ! function_exists( 'adamonishi_setup' ) ):
 
 endif; // adamonishi_setup
 /**
- * Tell WordPress to run toolbox_setup() when the 'after_setup_theme' hook is run.
+ * Tell WordPress to run setup function when the 'after_setup_theme' hook is run.
  */
 add_action( 'after_setup_theme', 'adamonishi_setup' );
 
@@ -76,7 +76,6 @@ function ao_enqueue_styles() {
 	}
 
 	wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700|Open+Sans:800,300,400');
-	// wp_enqueue_style( 'main', get_stylesheet_uri(), array('fonts'), '2.1.2' );
 }
 
 add_action( 'wp_enqueue_scripts', 'ao_enqueue_styles' );
