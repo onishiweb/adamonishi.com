@@ -37,6 +37,8 @@
 
 					<?php if( is_single() ): ?>
 						<?php the_content(); ?>
+
+						<?php comment_form(); ?>
 					<?php else: ?>
 						<div class="excerpt"><?php the_excerpt(); ?></div>
 						<p class="read-more"><a href="<?php the_permalink(); ?>">Read full post &raquo;</a></p>
