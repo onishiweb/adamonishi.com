@@ -5,25 +5,26 @@
 
 			<article role="main" <?php post_class(); ?>>
 				<header>
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				
+					<h1><?php the_title(); ?></h1>
+
 					<p class="byline">
 						Posted on <time><?php echo get_the_date(); ?></time>, in <?php the_category(' and '); ?>
 					</p>
 				</header>
 
-				<div class="excerpt"><?php the_excerpt(); ?></div>
-				<p class="read-more"><a href="<?php the_permalink(); ?>">Read full post &raquo;</a></p>
+				<?php the_content(); ?>
+
+				<?php comments_template(); ?>
 			</article>
 
 		<?php endwhile; endif; ?>
 
 		<nav class="page-nav clearfix">
 			<div class="align-left">
-				<?php next_posts_link( '&laquo; previous posts'); ?>
+				<?php previous_post_link( '%link', '&laquo; previous post' ); ?>
 			</div>
 			<div class="align-right">
-				<?php previous_posts_link( 'next posts &raquo;' ); ?>
+				<?php next_post_link( '%link', 'next post &raquo;'); ?>
 			</div>
 		</nav>
 	</div>

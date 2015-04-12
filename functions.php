@@ -22,6 +22,7 @@ if ( ! function_exists( 'adamonishi_setup' ) ):
 		 * This theme uses wp_nav_menu() in one location.
 		 */
 		register_nav_menus( array(
+			'main' => __( 'Main navigation', 'adamonishi' ),
 			'external-links' => __( 'External links', 'adamonishi' ),
 			'other-projects' => __( 'Other projects', 'adamonishi' ),
 		) );
