@@ -1,11 +1,10 @@
-Simple Theme
-============
+My website theme
+================
 
-A simple WordPress theme with just three files!
+Personal website theme based on [Simple Theme](https://github.com/onishiweb/simple-theme)
 
 ## To Do:
 
 - Code block styling
 - Finish Sass Conversion
 - Pages and Navigation
-- Theme customisations - allow a change of colour scheme...
