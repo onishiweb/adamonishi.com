@@ -80,3 +80,9 @@ function ao_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'ao_enqueue_styles' );
+
+
+/**
+ * Include trello functions
+ */
+require( get_template_directory() . '/inc/trello.php' );
