@@ -1,32 +1,37 @@
 <?php get_header(); ?>
 
-	<div class="container inner">
-		<?php if( have_posts() ): while( have_posts() ): the_post(); ?>
+	<div class="container outer">
 
-			<article role="main" <?php post_class(); ?>>
-				<header>
-					<h1><?php the_title(); ?></h1>
+		<main class="inner align-left" role="main">
+			<?php if( have_posts() ): while( have_posts() ): the_post(); ?>
 
-					<p class="byline">
-						Posted on <time><?php echo get_the_date(); ?></time>, in <?php the_category(' and '); ?>
-					</p>
-				</header>
+				<article <?php post_class(); ?>>
+					<header>
+						<h1><?php the_title(); ?></h1>
 
-				<?php the_content(); ?>
+						<p class="byline">
+							Posted on <time><?php echo get_the_date(); ?></time>, in <?php the_category(' and '); ?>
+						</p>
+					</header>
 
-				<?php comments_template(); ?>
-			</article>
+					<?php the_content(); ?>
 
-		<?php endwhile; endif; ?>
+					<?php comments_template(); ?>
+				</article>
 
-		<nav class="page-nav clearfix">
-			<div class="align-left">
-				<?php previous_post_link( '%link', '&laquo; previous post' ); ?>
-			</div>
-			<div class="align-right">
-				<?php next_post_link( '%link', 'next post &raquo;'); ?>
-			</div>
-		</nav>
+			<?php endwhile; endif; ?>
+
+			<nav class="page-nav clearfix">
+				<div class="align-left">
+					<?php previous_post_link( '%link', '&laquo; previous post' ); ?>
+				</div>
+				<div class="align-right">
+					<?php next_post_link( '%link', 'next post &raquo;'); ?>
+				</div>
+			</nav>
+		</main>
+
+		<?php get_sidebar(); ?>
 	</div>
 
 <?php get_footer(); ?>
