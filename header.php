@@ -15,23 +15,15 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		
-			<div class="container">
-				<header class="global-header" role="banner">
-				
-					<h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="tagline"><?php bloginfo( 'description' ); ?></p>
-				</header>
+		<header class="global-header" role="banner">
+			<h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<p class="tagline"><?php bloginfo( 'description' ); ?></p>
+		</header>
 
-				<nav class="global-navigation" role="navigation">
-					<?php
-						$args = array(
-							'theme_location' => 'main',
-							'container' => '',
-							'menu_class' => 'menu',
-						);
-					
-						wp_nav_menu( $args );
-					?>
-				
-				</nav>
-			</div>
+		<nav class="global-navigation" role="navigation">
+			<ul>
+				<li><a href="/about" id="menu-about">About</a></li>
+				<li><a href="/work" id="menu-work">Work</a></li>
+				<li><a href="/speaking" id="menu-speaking">Speaking</a></li>
+			</ul>			
+		</nav>
